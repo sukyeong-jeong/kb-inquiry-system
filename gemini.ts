@@ -51,7 +51,7 @@ export const classifyInquiry = async (inquiry: string): Promise<GeminiResponse> 
 
   try {
     const response = await genAI.models.generateContent({
-      model: 'gemini-1.5-flash-latest',
+      model: 'gemini-2.0-flash',
       contents: [{ role: 'user', parts: [{ text: prompt }] }]
     })
     
