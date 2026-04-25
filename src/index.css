@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kb-yellow: #FFCC00;
+  --color-kb-dark-grey: #5B534D;
+  --color-kb-light-grey: #F4F4F2;
+}
+
+@layer base {
+  body {
+    @apply bg-kb-light-grey text-kb-dark-grey antialiased;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  }
+}
+
+@layer components {
+  .kb-card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden;
+  }
+  
+  .kb-button-primary {
+    @apply bg-kb-yellow text-kb-dark-grey font-bold py-3 px-6 rounded-xl hover:bg-[#E6B800] transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .kb-input {
+    @apply w-full p-4 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-kb-yellow focus:border-transparent transition-all;
+  }
+}
